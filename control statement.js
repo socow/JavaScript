@@ -141,3 +141,53 @@ printTriangle(3);
 console.log("높이: 5");
 printTriangle(5);
 //이렇게 파라미터의 숫자 값에 따라 '*'을 출력하는 코드를 완성했다면 이제 반복할 때마다 '*'의 개수를 증가시켜주어야 하는데요. 그러기 위해서, 콘솔에 '*'을 바로 출력하는 게 아니라 for문이 반복되기 전에 message라는 변수를 만든 다음 for문이 반복될 때마다 message에 '*'을 하나씩 추가하면서 콘솔에 message를 출력한다면
+
+//while문 (while statement)
+while (조건부분) {
+  동작부분;
+}
+//while문 (while statement)
+let i = 30;
+
+while (i % 7 !== 0) {
+  i++;
+}
+
+console.log(i);
+
+//break와 continuec차이
+//break는 반복문에 조건 부분과 상관없이 반복이 실행되는 도중에 빠져나갈 수 있다
+//continue는 동작 부분을 한번 건너뛰는 것이다 다시말해 continue를 만나게 되면 그 아래 코드들은 실행 되지 않고 바로 다음단계로 넘어가는것이다
+let i = 1;
+
+while (i <= 20) {
+  console.log(i);
+  if (i == 7) {
+    break;
+  }
+  i++;
+}
+
+for (let i = 1; i <= 10; i++) {
+  if (i % 2 === 0) {
+    continue;
+  }
+  console.log(i);
+}
+// 구구단 만들기
+for (let i = 1; i <= 9; i++) {
+  for (let j = 1; j <= 9; j++) {
+    console.log(`${i} * ${j} = ${i * j}`);
+  }
+}
+
+//피보나치 수열
+let current = 1;
+let previous = 0;
+
+for (let i = 1; i <= 50; i++) {
+  console.log(current);
+  let temp = previous; // previous를 임시 보관소 temp에 저장
+  previous = current;
+  current = current + temp; // temp에는 기존 previous 값이 저장돼 있음
+}
